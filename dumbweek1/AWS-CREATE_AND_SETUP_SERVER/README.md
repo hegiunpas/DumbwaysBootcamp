@@ -73,5 +73,23 @@ Setelah instance private dibuat, tidak perlu diberi Elastic IP
 
 ![17](assets/18.png)
 
-18. 
+# SETUP USER & SSH PUBLIC INSTANCE
+
+18. setelah mendownload key pair untuk kedua instance, ubah permission dari file key pair tersebut
+
+```
+sudo chmod 400 key_pair.pem
+```
+
+![18](assets/19.png)
+
+19. lakukan SSH ke server public dengan menggunakan key pair
+
+```
+ssh -i key_pair.pem ubuntu@ip-public
+```
+
+![19](assets/20.png)
+
+ 
 
