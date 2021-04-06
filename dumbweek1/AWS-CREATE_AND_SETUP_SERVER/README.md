@@ -142,7 +142,7 @@ scp key-pair.pem nama-user@ip-public:/server/directory/key-pair.pem
 
 ![26](assets/27.png)
 
-27. selanjutnya, lakukan remote SSH ke server public lalu ke server private
+27. selanjutnya, lakukan remote SSH ke server public lalu ke server private. Dan buat user baru seperti sebelumnya
 
 ![27](assets/28.png)
 
@@ -158,6 +158,59 @@ scp key-pair.pem nama-user@ip-public:/server/directory/key-pair.pem
 
 # CREATE & SETUP NAT INSTANCE FOR PRIVATE SERVER
 
-30. 
+* Supaya private server aman, jangan diberi public ip yang dapat diakses langsung melalui internet. Tapi nantinya akan diakses melalui server public __revers proxy__ . Namun, dengan begitu server private tidak terhubung ke internet, oleh karena itu kita akan membuat NAT intances agar server private dapat terhubung ke internet.
+
+30. Pertama, Launch Instances dan pilih AMI nat
+
+![30](assets/32.png)
+
+31. disini saya memilih tipe Instance yang sederhana yaitu t2.micro
+
+![31](assets/33.png)
+
+32. pada Configure Instance Details yang perlu diubah yaitu Subnet, pilih public subnet dan `enable Auto-assign Public IP` 
+
+![32](assets/34.png)
+
+33. pada Security Group, tambahkan 1 rule dengan setup type __all traffic__ dan source ip dari network/subnet-server-private
+
+![33](assets/35.png)
+
+34. selanjutnya masuk ke list instances, centang NAT instances dan klik `Action > Networking > Change source/destination check`
+
+![34](assets/36.png)
+
+35. pada settingan ini ceklis __stop__ dan klik save
+
+![35](assets/37.png)
+
+36. jika sudah, masuk ke `service > VPC > Route Tables` lalu klik `Create route table`
+
+![36](assets/38.png)
+
+37. kita bikin route table baru untuk private server, pilih VPC dari Subnet ID private server. klik Create
+
+![37](assets/39.png)
+
+38. selanjutnya `Edit routes` dari route table yang telah kita buat
+
+![38](assets/40.png)
+
+39. `Add route` dan pilih `Target` NAT Instance. __Save routes__
+
+![39](assets/41.png)
+
+40. jika sudah, pergi ke `VPC > Subnets > subnet-private-server` lalu klik `Edit route table association`
+
+![40](assets/42.png)
+
+41. lalu associate route table tadi dengan subnet private. klik __Save__
+
+![41](assets/43.png)
+
+42. test ping ke internet dari private server
+
+![42](assets/44.png)
+
  
 
