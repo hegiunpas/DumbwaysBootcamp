@@ -1,6 +1,6 @@
 # CREATE & SETUP PUBLIC SERVER FOR REVERSE PROXY
 
-1. AWS Management Console & masuk ke `service > EC2 > Instances` lalu pilih Launch instances
+1. masuk ke AWS Management Console & masuk ke `service > EC2 > Instances` lalu pilih Launch instances
 
 ![1](assets/01.png)
 
@@ -24,4 +24,54 @@
 
 ![6](assets/06.png)
 
+7. Lalu pilih Review and Launch, jangan lupa membuat key pair untuk login ke instance nantinya. Pilih `Create a new key pair` dan isikan nama key pair dan `Download Key Pair` . Jika sudah, Launch Instances
+
+![7](assets/07.png)
+
+8. dan instance untuk public telah dibuat
+
+![8](assets/08.png)
+
+9. selanjutnya, buat elastic IP static untuk dialokasikan ke Instance public 
+
+![9](assets/09.png)
+![9.1](assets/10.png)
+
+10. lalu associate elastic ip dengan instance public. Centang Elastic IP yang ada, pilih `Actions > Associate Elastic IP address`
+
+![10](assets/11.png)
+
+11. pilih `Resource type = Instance` dan pilih `Instance = public-instance` . klik Associate
+
+![11](assets/12.png)
+
+# CREATE & SETUP PRIVATE SERVER FOR APPLICATION
+
+12. buat lagi instance untuk private server. Pilih OS yang sama yaitu ubuntu server 18.04 LTS
+
+![12](assets/13.png)
+
+13. pilih t2.micro
+
+![13](assets/14.png)
+
+14. pada Configure Instance Details, masih sama seperti sebelumnya
+
+![14](assets/15.png)
+
+15. Tambahkan Storage sebesar 10 Gib
+
+![15](assets/16.png)
+
+16. pada Configure Security Group disini berbeda dari sebelumnya, yaitu tambahkan rule untuk mengizinkan semua traffic yang masuk
+
+![16](assets/17.png)
+
+17. jika sudah, Review and Launch lalu pilih key pair yang sebelumnya sudah dibuat.
+
+Setelah instance private dibuat, tidak perlu diberi Elastic IP
+
+![17](assets/18.png)
+
+18. 
 
