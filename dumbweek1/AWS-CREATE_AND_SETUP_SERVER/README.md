@@ -91,5 +91,73 @@ ssh -i key_pair.pem ubuntu@ip-public
 
 ![19](assets/20.png)
 
+20. tambahkan user baru untuk jaga-jaga apabila key pair hilang. Jalankan perintah 
+
+```
+sudo adduser nama-user
+```
+
+![20](assets/21.png)
+
+21. tambahkan akses sudo untuk user baru tersebut dengan menjalankan perintah
+
+```
+sudo usermod -aG sudo nama-user
+```
+
+![21](assets/22.png)
+
+22. edit pada file `/etc/ssh/sshd_config` dan ubah pada bagian `PasswordAuthentication no` menjadi `PasswordAuthentication yes`
+
+![22](assets/23.png)
+
+23. jika sudah, restart service sshd
+
+```
+sudo systemctl restart sshd
+sudo systemctl status sshd
+```
+
+![23](assets/24.png)
+
+24. lakukan remote ssh ke server public tanpa menggunakan key pair
+
+```
+ssh nama-user@ip-public
+```
+
+![25](assets/25.png)
+
+25. Selanjutnya kita akan mencoba remote SSH server private dari server public
+
+pertama, lakukan transfer key pair dari local ke server public
+
+```
+scp key-pair.pem nama-user@ip-public:/server/directory/key-pair.pem
+```
+
+![25](assets/26.png)
+
+26. buka kembali aws management console dan masuk ke `EC2 > Instances > private-server` lalu salin Private IPv4 address
+
+![26](assets/27.png)
+
+27. selanjutnya, lakukan remote SSH ke server public lalu ke server private
+
+![27](assets/28.png)
+
+# SETUP VPC (Virtual Private Cloud)
+
+28. pertama, buka aws management console dan masuk ke `service > VPC > subnets`
+
+![28](assets/30.png)
+
+29. beri nama subnet milik public server menjadi `subnet-id-public-server` dan private server `subnet-id-private-server`
+
+![29](assets/31.png)
+
+# CREATE & SETUP NAT INSTANCE FOR PRIVATE SERVER
+
+30. 
  
 
