@@ -19,8 +19,6 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-![4](assets/04.png)
-
 5. buka browser dan masukkan subdomain pada URL. Jika tampilan frontend terlihat, maka subdomain berhasil diterapkan
 
 ![5](assets/05.png)
