@@ -1,3 +1,5 @@
+# CUSTOM DOMAIN
+
 1.  pertama buka browser dan login ke cloudflare, di __Home__ klik domain yang tersedia. Disini saya mempunyai domain `onlinecamp.id`
 
 ![1](assets/01.png)
