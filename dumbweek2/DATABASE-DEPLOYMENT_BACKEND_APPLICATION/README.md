@@ -54,7 +54,6 @@ show databases;
 
 ```
 npm i
-
 ```
 
 ![6](assets/06.png)
