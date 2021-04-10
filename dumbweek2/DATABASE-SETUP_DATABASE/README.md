@@ -43,7 +43,7 @@ grant all on *.* to '<user-baru>'@'ip-server-backend';
 FLUSH PRIVILEGES;
 ```
 
-![5](assets/5.png)
+![5](assets/05.png)
 
 6. edit bind-address pada `/etc/mysql/mysql.conf.d` dan isikan `bind address = 0.0.0.0` agar ip nya dapat diakses oleh `server-private-backend`
 
