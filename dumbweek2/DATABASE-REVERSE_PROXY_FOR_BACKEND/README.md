@@ -1,6 +1,6 @@
 # REVERSE PROXY
 
-1. disini saya membuat tambahan 2 private instances frontend (load balancing), 1 private instances backend
+1. disini saya membuat tambahan 2 private instances frontend (load balancing), dan 1 private instances backend.
 
 ![1](assets/00.png)
 
