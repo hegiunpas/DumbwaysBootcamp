@@ -1,0 +1,20 @@
+# apa itu reverse proxy?
+ jawab: salah satu jenis proxy yang bertindak sebagai penghubung antara client dan server, jadi reverse proxy ini yang meneruskan request client dan menyalurkannya ke server lainnya.
+
+# auto-assign ip public?
+jawab: jika di enable, maka ip yang didapat tidak dapat kita ubah atau dilepas dan itu akan secara otomatis dialokasikan. Sedangkan jika kita disable maka nanti kita perlu membuat ip manual agar menjadi static di elastic ip.
+
+# Elastic IP Address?
+jawab: sebuah IPv4 static yang dirancang untuk mengalokasikan IP ke komputasi cloud server dinamis
+
+# Install application
+jawab: aplikasi seperti frontend, backend, database. itu disimpan di instance yang berbeda dan private.
+
+# kenapa buat 2 user mysql?
+jawab: karena kak nanti yang akses database bukan kita aja
+
+# subdomain buat apa?
+jawab: buat gateaway penghubung antara reverse proxy dengan database
+
+# CORS
+jawab: setelah beberapa hari aku kesulitan mencari solusi mengenai block sama CORS, ternyata ada codingan yang kurang di wayshub-backend/index.js dibagian cors tidak menambahkan ' ; '
