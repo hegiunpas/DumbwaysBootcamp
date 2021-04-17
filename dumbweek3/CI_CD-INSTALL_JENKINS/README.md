@@ -1,7 +1,5 @@
 # INSTALL JENKINS
 
-*sebelum ke langkah-langkah, lakukan setup docker-compose auto run terlebih dahulu*
-
 1. pertama, buat private instance untuk `jenkins` dan pastikan sudah terhubung
 
 ![1](assets/01.png)
@@ -9,6 +7,8 @@
 2. login ke instances `jenkins` , lalu pastikan `Docker` & `docker-compose` sudah terinstall di server 
 
 ![2](assets/02.png)
+
+*sebelum ke langkah-langkah, lakukan setup docker-compose auto run terlebih dahulu pada server jenkins*
 
 3. buat direktori `jenkins` yang nantinya akan di mount volumes ke direktori `/var/jenkins_home` pada container jenkins, dan buat file `docker-compose.yml`
 
