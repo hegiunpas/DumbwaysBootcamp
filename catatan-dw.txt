@@ -18,3 +18,11 @@ jawab: buat gateaway penghubung antara reverse proxy dengan database
 
 # CORS
 jawab: setelah beberapa hari aku kesulitan mencari solusi mengenai block sama CORS, ternyata ada codingan yang kurang di wayshub-backend/index.js dibagian cors tidak menambahkan ' ; '
+
+# input password otomatis
+jawab: saya sempat kebingungan tentang CI/CD mengenai exec command yang tak bisa menjalankan sudo karena membutuhkan password, dan command tersebut berupa script yang dimana ketika script itu berjalan, kita gak bisa input password. Lantas bagaimana agar dapat menjalankan perintah `sudo` tanpa input password?
+
+	command: echo <password> | sudo -S <command>
+
+# output jenkins job
+jawab: saya dibuat heran oleh logs output dari jenkins job tidak terlihat, lantas apa penyebabnya? ternyata saya tidak mencentang `Verbose output in console` pada `build step` > `SSH server` > `Advanced`
