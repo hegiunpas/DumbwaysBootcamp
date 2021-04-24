@@ -4,7 +4,7 @@
 
 1. disini saya akan menggunakan ansible untuk proses setup. Remote ke server ansible dan create file `node-exporter.yml`
 
-1[1](assets/01.png)
+![1](assets/01.png)
 
 2. jika sudah, buat file `prometheus.yml` untuk mendefinisikan hosts mana saja yang akan dimonitoring.
 
