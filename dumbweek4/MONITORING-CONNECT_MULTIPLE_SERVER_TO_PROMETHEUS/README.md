@@ -8,7 +8,7 @@
 
 2. jika sudah, buat file `prometheus.yml` untuk mendefinisikan hosts mana saja yang akan dimonitoring.
 
-`file ini nantinya akan dimount kedalam container pada direktori /etc/prometheus`
+*file ini nantinya akan dimount kedalam container pada direktori /etc/prometheus*
 
 ![2](assets/02.png)
 
