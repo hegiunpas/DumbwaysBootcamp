@@ -2,7 +2,7 @@
 
 1. buat 2 repository baru untuk `waysgallery-frontend` & `waysgallery-backend`
 
-![1](assets/01/png)
+![1](assets/01.png)
 ![1.2](assets/02.png)
 
 2. clone repository `waysgallery-frontend` & `waysgallery-backend`
