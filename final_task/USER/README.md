@@ -58,7 +58,7 @@ ansible all -m ping
 ansible-playbook create_user.yml
 ```
 
-![11](assets/10.yml)
+![11](assets/10.png)
 
 12. apply script hostname-change.yml
 
