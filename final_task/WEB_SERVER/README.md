@@ -21,7 +21,7 @@
 berikut adalah isi dari file nya
 
 ![3.1](assets/03-1.png)
-![3.2](assets/03.2.png)
+![3.2](assets/03-2.png)
 ![3.3](assets/03-3.png)
 ![3.4](assets/03-4.png)
 ![3.5](assets/03-5.png)
