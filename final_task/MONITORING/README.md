@@ -45,7 +45,7 @@
 
 ![10](assets/11.png)
 
-11. klik save & data
+11. klik save & test
 
 ![11](assets/12.png)
 
