@@ -12,7 +12,7 @@
 
 3. jika sudah, lakukan push ke github pada branch Production
 
-![3](00-2.png)
+![3](assets/00-2.png)
 
 4. lalu masuk ke server ansible dan tambahkan variable frontend & backend yang nantinya akan kita definisikan pada file script ansible fronted
 
